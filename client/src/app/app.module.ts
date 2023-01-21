@@ -17,20 +17,21 @@ import { AppBaitsComponent } from './app-baits/app-baits.component';
     AppComponent,
     MaterialTabsComponent,
     AboutComponent,
-    SpringContentComponent,
-    SummerContentComponent,
-    FallContentComponent,
-    HomeContentComponent,
+    // SpringContentComponent,
+    // SummerContentComponent,
+    // FallContentComponent,
+    // HomeContentComponent,
     AppBaitsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: []
 })
 
 export class AppModule { }

@@ -8,7 +8,7 @@ import { ThemePalette } from '@angular/material/core';
   styleUrls: ['./material-tabs.component.scss']
 })
 export class MaterialTabsComponent {
-  links = ['Spring', 'Summer', 'Fall'];
+  links = ['Home', 'Spring', 'Summer', 'Fall'];
   activeLink = this.links[0];
   background: ThemePalette = undefined;
 
