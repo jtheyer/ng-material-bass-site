@@ -1,25 +1,41 @@
 <div class="parent-container">
   <div class="child-container">
-    <router-outlet>
+    
+    <home-content *ngIf="season === 'home'">
+      <router-outlet></router-outlet>
+    </home-content>
+
+    <spring-content *ngIf="season === 'spring'">
+      <router-outlet></router-outlet>
+    </spring-content>
+
+    <summer-content *ngIf="season === 'summer'">
+      <router-outlet></router-outlet>
+    </summer-content>
+
+    <fall-content *ngIf="season === 'fall'">
+      <router-outlet></router-outlet>
+    </fall-content>
+    
 
       <div class="tabs-wrapper">
         <mat-tab-group
         [selectedIndex]="activeTabIndex"
         (selectedTabChange)="changeSeason($event)">
           <mat-tab label="Home">
-            <home-content></home-content>
+            <!-- <home-content></home-content> -->
           </mat-tab>
           <mat-tab label="Spring">
-            <spring-content></spring-content>
+            <!-- <spring-content></spring-content> -->
           </mat-tab>
           <mat-tab label="Summer">
-            <summer-content></summer-content>
+            <!-- <summer-content></summer-content> -->
           </mat-tab>
           <mat-tab label="Fall">
-            <fall-content></fall-content>
+            <!-- <fall-content></fall-content> -->
           </mat-tab>
         </mat-tab-group>
       </div>
-    </router-outlet>
+    
   </div>
 </div>
