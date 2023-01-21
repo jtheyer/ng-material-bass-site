@@ -12,6 +12,10 @@ export class AppComponent {
   selectedTabChange = 0;
   season = 'home' //Winter!! lol..
   constructor(){
+    if (this.season == 'home'){
+      this.activeTabIndex = 0;
+      this.selectedTabChange = 0;
+    }
     if (this.season == 'spring'){
       this.activeTabIndex = 1;
       this.selectedTabChange = 1;
