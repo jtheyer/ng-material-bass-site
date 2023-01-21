@@ -1,41 +1,17 @@
-<div class="parent-container">
-  <div class="child-container">
-    
-    <home-content *ngIf="season === 'home'">
-      <router-outlet></router-outlet>
-    </home-content>
+<div class="safe-area">	
+  <router-outlet></router-outlet>	
+</div> 
 
-    <spring-content *ngIf="season === 'spring'">
-      <router-outlet></router-outlet>
-    </spring-content>
-
-    <summer-content *ngIf="season === 'summer'">
-      <router-outlet></router-outlet>
-    </summer-content>
-
-    <fall-content *ngIf="season === 'fall'">
-      <router-outlet></router-outlet>
-    </fall-content>
-    
-
-      <div class="tabs-wrapper">
-        <mat-tab-group
-        [selectedIndex]="activeTabIndex"
-        (selectedTabChange)="changeSeason($event)">
-          <mat-tab label="Home">
-            <!-- <home-content></home-content> -->
-          </mat-tab>
-          <mat-tab label="Spring">
-            <!-- <spring-content></spring-content> -->
-          </mat-tab>
-          <mat-tab label="Summer">
-            <!-- <summer-content></summer-content> -->
-          </mat-tab>
-          <mat-tab label="Fall">
-            <!-- <fall-content></fall-content> -->
-          </mat-tab>
-        </mat-tab-group>
-      </div>
-    
-  </div>
+<div class="tabs-wrapper">
+  <nav mat-tab-nav-bar ngClass="tabs" [tabPanel]="tabPanel">
+    <a 
+      *ngFor="let link of links"
+      mat-tab-link
+      routerLink="{{link.path}}"
+      routerLinkActive="active-link"
+      (click)="activeLink=link.path"
+      [active]="activeLink == link.path"
+    >  {{ link.label }} </a>
+  </nav>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 </div>
