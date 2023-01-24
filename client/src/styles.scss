@@ -1,34 +1,146 @@
 /* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+//full path is needed for scss (including file extension like .scss)
+@import '../node_modules/@angular/material/_theming.scss'; 
+@import '../node_modules/@angular/material/_index.scss'; 
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-//////////////////////////////////////////////////
-.page-container {
-    background-color: #f8f9fa;
-    padding: 10px;
-    width: 90%;
-    min-width: 378px;
+@include mat.core();
+
+$my-blue-palette: (
+    50 : #e2e9f4,
+    100 : #b6c8e3,
+    200 : #86a3d0,
+    300 : #567ebd,
+    400 : #3163af,
+    500 : #0d47a1,
+    600 : #0b4099,
+    700 : #09378f,
+    800 : #072f85,
+    900 : #032074,
+    A100 : #a2b4ff,
+    A200 : #6f8aff,
+    A400 : #3c61ff,
+    A700 : #234cff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+/* [Palette(s)] For use in src/lib/core/theming/_palette.scss  
+  ...or just here seems fine.. */
+$my-grn-palette: (
+  50 : #e3fbe2,
+  100 : #b9f5b6,
+  200 : #8aef86,
+  300 : #5be956,
+  400 : #38e431,
+  500 : #15df0d,
+  600 : #12db0b,
+  700 : #0fd709,
+  800 : #0cd207,
+  900 : #06ca03,
+  A100 : #f2fff2,
+  A200 : #c0ffbf,
+  A400 : #8dff8c,
+  A700 : #74ff73,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+$my-primary: mat.define-palette($my-blue-palette, 500);
+// $my-accent: mat.define-palette($my-grn-palette, A200, A100, A400);
+$my-accent: mat.define-palette($my-grn-palette, 100, 200, 300);
+
+// The "warn" palette is optional and defaults to red if not specified.
+$my-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+   warn: $my-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+// Emit theme-dependent styles for common features used across multiple components.
+// @include mat.core-theme($my-theme);
+
+// Emit styles for MatButton based on `$my-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not
+// emit any typography styles.
+// @include mat.button-theme($my-theme);
+
+//....or just do all and have a huge css file:
+@include mat.all-component-themes($my-theme);
+
+body { 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
-.parent-container,
-.d-flex {
-    display: flex;
+
+.card-parent {
+  margin-bottom: 20px;
+  // max-width: 80%;
 }
+
+.bait-showcase-img {
+  max-width: 400px;
+  max-height: 400px;
+  min-width: 250px;
+  padding: 15px;
+  border: #000000;
+  border-radius: 5%;
+}
+
+
+
+
+/** Useful History *******************************************/
+
+// .page-container {
+//     background-color: #f8f9fa;
+//     padding: 10px;
+//     width: 90%;
+//     min-width: 378px;
+// }
 
 .child-centered,
 .m-auto {
     /* Magic! */
     margin: auto;   
-    max-width: 430px;
-    min-width: 220px;
+    // max-width: 80%;
+    // min-width: fit-content;
+    // min-width: 200px;
+    // max-width: fit-content;
+    // max-width: 65%;
 }
-
-div#topdiv, div#bottomdiv{
-    position:fixed; 
-    left: 0px;
-    width: 100%;
-    color: #CCC;        
-}
-
-div#topdiv{top:0px;}
-div#bottomdiv {bottom:0px;}

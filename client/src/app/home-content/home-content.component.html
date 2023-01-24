@@ -1,1 +1,51 @@
-<p>home-content works!</p>
+<div class="child-centered">
+    
+    <div class="welcome-block">
+        <h1>Welcome to a no frills, bare bones, tl;dr quick-stop
+            for NY Bass fishing. </h1>
+            <p>I'm here as a tournament angler with
+            many 1st, 2nd, and 3rd place finishes to share what is currently
+            is working for me. <br> Please order from the affiliate
+            link(s) if you're looking to buy. "Help me help you!"<br>
+            I greatly appreciate your interest and hope to keep bringing
+            useful content to this table, be safe & tight lines!
+            </p>
+    </div>
+</div>
+
+<div class="card-parent" *ngFor="let bait of baits">
+    <mat-card class="child-centered my-mat-card">
+        <mat-card-header>
+            <mat-card-title>{{ bait.label }}</mat-card-title>
+            <!-- <mat-card-subtitle>
+                <strong>Use when:</strong> {{ bait.when }}<br>
+                <strong>Conditions:</strong> {{ bait.conditions }}
+            </mat-card-subtitle> -->
+            <mat-card-subtitle>
+                <p>{{bait.make}} ({{ bait.colour }})</p>
+                <a href="{{bait.affiliateLink}}">{{ bait.linkLabel }}</a>
+            </mat-card-subtitle>
+            <!-- <mat-card-subtitle>
+                <a href="{{bait.affiliateLink}}">{{ bait.linkLabel }}</a>
+            </mat-card-subtitle> -->
+            
+        </mat-card-header>
+        <mat-card-content>
+            <mat-grid-list cols="2" rowHeight="4:3">
+                <mat-grid-tile>
+                    <img mat-card-image class="bait-showcase-img"
+                    src="{{bait.imgUrl}}"
+                    alt="{{bait.imgAlt}}"
+                    >
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
+                    <strong>Conditions:</strong> {{ bait.conditions }}</p>
+                </mat-grid-tile>
+              </mat-grid-list>
+
+        </mat-card-content>
+        
+
+    </mat-card>
+</div>
