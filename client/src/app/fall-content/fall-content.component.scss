@@ -1,0 +1,29 @@
+:root {
+    --var-col: 1fr;
+  }
+  select {
+    min-width: unset;
+  }
+
+.bait-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    background-color: var(--color-stroke);
+    padding: 1em;
+    max-width: 70rem;
+  }
+
+
+/**
+  Move this to bait card component
+*/
+.bait-card {
+    background-color: #eceff1;
+}
+
+.bait-card-img {
+    margin: 0px 5px 5px 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}

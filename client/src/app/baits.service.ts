@@ -119,8 +119,97 @@ export class BaitsService {
       ,
       isVisible: true
     },
-    { label: 'Jig', season: 'summer' },
-    { label: 'Swimbaits', season: 'summer' },
+    {
+      season: 'summer',
+      label: 'Jerkbait 1',
+      make: 'Megabass Ito 110',
+      colour: 'GG Pro Perch',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/md-gg-perch.jpg',
+      imgAlt: 'Megabass Jerkbait (GG-Perch)',
+      situation: 'Perch are all over shallow. \
+      They\'re heavily schooling and aggressively roaming.',
+      conditions: 'Any',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'See on Tackle Warehouse'
+      ,
+      isVisible: true
+    },
+    { 
+      season: 'summer',
+      label: 'Jerkbait 2', 
+      make: 'Megabass Ito 110',
+      colour: 'Mat Shad',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/mat-shad-sm.jpg',
+      imgAlt: 'Megabass Jerkbait (Mat Shad)',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Cloudy / Dark',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'See on Tackle Warehouse'
+      ,
+      isVisible: true
+    },
+    { 
+      season: 'summer',
+      label: 'Jerkbait 2', 
+      make: 'Megabass Ito 110',
+      colour: 'Mat Shad',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/mat-shad-sm.jpg',
+      imgAlt: 'Megabass Jerkbait (Mat Shad)',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Cloudy / Dark',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'See on Tackle Warehouse'
+      ,
+      isVisible: true
+    },
+    { 
+      season: 'summer',
+      label: 'Jerkbait 2', 
+      make: 'Megabass Ito 110',
+      colour: 'Mat Shad',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/mat-shad-sm.jpg',
+      imgAlt: 'Megabass Jerkbait (Mat Shad)',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Cloudy / Dark',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'See on Tackle Warehouse'
+      ,
+      isVisible: true
+    },
+    { 
+      season: 'summer',
+      label: 'Jerkbait 2', 
+      make: 'Megabass Ito 110',
+      colour: 'Mat Shad',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/mat-shad-sm.jpg',
+      imgAlt: 'Megabass Jerkbait (Mat Shad)',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Cloudy / Dark',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'See on Tackle Warehouse'
+      ,
+      isVisible: true
+    },
+    { 
+      season: 'summer',
+      label: 'Jerkbait 2', 
+      make: 'Megabass Ito 110',
+      colour: 'Mat Shad',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/mat-shad-sm.jpg',
+      imgAlt: 'Megabass Jerkbait (Mat Shad)',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Cloudy / Dark',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'See on Tackle Warehouse'
+      ,
+      isVisible: true
+    },
     { label: 'Topwater', season: 'fall' },
     { label: 'Plastic worm', season: 'fall' },
   ];

@@ -1,15 +1,35 @@
-<!-- <mat-card #card>
-    <mat-card-header>
-        <mat-card-title>{{bait.label}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-        <img src="{{bait.imageUrl}}">
-    </mat-card-content>
-</mat-card>
-<mat-card *ngIf="showBack">
-    <mat-card-content>
-        <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
-            <strong>Conditions:</strong> {{ bait.conditions }}
-        </p>
-    </mat-card-content>
-</mat-card> -->
+<!-- <div #cw class="bait-container" (swipe)="onSwipe(i)" [id]="'spring-bait-'+i">
+    <div *ngIf="bait.isVisible">
+        <mat-card class="bait-card">
+            <mat-card-header>
+                <mat-card-title>{{bait.label}}</mat-card-title>
+            </mat-card-header>
+            <img class="bait-card-img" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
+        </mat-card>
+    </div>
+    <div *ngIf="!bait.isVisible">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{bait.label}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
+                    <strong>Conditions:</strong> {{ bait.conditions }}
+                </p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div> -->
+
+
+<!-- see "mat-card-title-group", add bait color as subtitle? -->
+<div class="tp-wrapper">
+	<div class="tp-box" (click)="toggleFlip()" (swipe)="toggleFlip()" [@flipState]="flip">
+		<div class="tp-box__side tp-box__front">
+            Front
+		</div>
+		<div class="tp-box__side tp-box__back">
+            Back
+		</div>
+	</div>
+</div>

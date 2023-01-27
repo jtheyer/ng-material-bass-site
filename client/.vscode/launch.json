@@ -4,10 +4,20 @@
   "configurations": [
     {
       "name": "ng serve",
-      "type": "pwa-chrome",
+      "type": "chrome",
       "request": "launch",
-      "preLaunchTask": "npm: start",
-      "url": "http://localhost:4200/"
+      // "preLaunchTask": "npm: start",
+      "preLaunchTask": "Serve Fontend",
+      "url": "http://localhost:4200/",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "sourceMapPathOverrides": {
+        "webpack:/*": "${webRoot}/*",
+        "/./*": "${webRoot}/*",
+        "/src/*": "${webRoot}/src/*",
+        "/*": "*",
+        "/./~/*": "${workspaceFolder}/node_modules/*"
+      }
     },
     {
       "name": "ng test",
@@ -15,6 +25,35 @@
       "request": "launch",
       "preLaunchTask": "npm: test",
       "url": "http://localhost:9876/debug.html"
+    },
+    /** To debug:
+    * 1. $> npm run start  //starts angular server
+    * 2. Run & Debug: Localhost client // starts chrome
+    * 3. Run & Debug: Attch to browser (this one ) // attaches the debugger to chrome, this one 
+        ..is needed to actually hit the breakpoints.
+    */
+    {
+      "name": "Localhost client",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}",
+      "sourceMaps": true,
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "runtimeArgs": [
+        "--remote-debugging-port=9222",
+        "--disable-web-security",
+        "--allow-insecure-localhost"
+      ]
+    },
+    {
+      "type": "chrome",
+      "request": "attach",
+      "name": "Attach to browser",
+      "port": 9222
     }
   ]
 }

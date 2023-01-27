@@ -13,9 +13,9 @@ export class SpringContentComponent implements OnInit {
 
   constructor(
     private baitsService: BaitsService) {
-      
+
   };
-  
+
   ngOnInit(): void {
     this.baits = this.baitsService.getBaitsBySeason('spring');
   }
@@ -23,23 +23,11 @@ export class SpringContentComponent implements OnInit {
   @ViewChild('cw') cw?: HTMLElement;
   onSwipe(i: number) {
     if (this.cw) {
-      if(!this.isScrolling){
+      if (!this.isScrolling) {
         this.baits![i].isVisible = !this.baits![i].isVisible;
       }
       this.isScrolling = false;
     }
   }
 
-onTouchMove() {
-  // event.stopPropagation();
-  this.isScrolling = true;
-}
-onTouchStart() {
-  // event.stopPropagation();
-  this.isScrolling = false;
-}
-
-  onTouchEnd(){
-    this.isScrolling = false;
-  }
 }

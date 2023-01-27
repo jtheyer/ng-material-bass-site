@@ -1,15 +1,33 @@
 <div class="child-centered">
-    
+
     <div class="welcome-block">
-        <h1>Welcome to a no frills, bare bones, tl;dr quick-stop
-            for NY Bass fishing. </h1>
-            <p>I'm here as a tournament angler with
-            many 1st, 2nd, and 3rd place finishes to share what is currently
-            is working for me. <br> Please order from the affiliate
-            link(s) if you're looking to buy. "Help me help you!"<br>
-            I greatly appreciate your interest and hope to keep bringing
-            useful content to this table, be safe & tight lines!
-            </p>
+        <h1>Welcome to a TL;DR showcase of NY Bass fishing baits.</h1>
+        <p>
+            I'd like to share what is currently
+            is working for me (as a successful tournament angler).
+            <br>
+            This is as much of a journal for me to look back on as it is
+            (hopefully) helpful for other anglers out there!
+            <br>
+            *Swipe the bait cards to escape TL;DR and dig deeper.
+            <br>
+            <br>
+            <mark>DISCLAIMER</mark>: Affiliate marketing links ahead. All products here are
+            ones I genuinely believe in! If you're looking to try a product,
+            please order from the link(s) provided 🙏<br>
+            These links are of NO EXTRA COST to you, and are a great way to
+            show your support for this page.
+            <br>
+            <br>
+            Thank you and tight lines 🎣
+        </p>
+
+        <h2>What's hot this week:</h2>
+        <p>
+            ...nothing for me, because I code over winter and skip the hard water!
+            But here is what was working the 2nd
+            week of December (2022):
+        </p>
     </div>
 </div>
 
@@ -28,24 +46,22 @@
             <!-- <mat-card-subtitle>
                 <a href="{{bait.affiliateLink}}">{{ bait.linkLabel }}</a>
             </mat-card-subtitle> -->
-            
+
         </mat-card-header>
         <mat-card-content>
             <mat-grid-list cols="2" rowHeight="4:3">
                 <mat-grid-tile>
-                    <img mat-card-image class="bait-showcase-img"
-                    src="{{bait.imgUrl}}"
-                    alt="{{bait.imgAlt}}"
-                    >
+                    <img mat-card-image class="bait-showcase-img" src="{{bait.imgUrl}}" alt="{{bait.imgAlt}}">
                 </mat-grid-tile>
                 <mat-grid-tile>
                     <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
-                    <strong>Conditions:</strong> {{ bait.conditions }}</p>
+                        <strong>Conditions:</strong> {{ bait.conditions }}
+                    </p>
                 </mat-grid-tile>
-              </mat-grid-list>
+            </mat-grid-list>
 
         </mat-card-content>
-        
+
 
     </mat-card>
 </div>

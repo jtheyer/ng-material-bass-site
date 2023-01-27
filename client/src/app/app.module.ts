@@ -19,7 +19,7 @@ import { HomeContentComponent } from './home-content/home-content.component';
 import { SpringContentComponent } from './spring-content/spring-content.component';
 import { SummerContentComponent } from './summer-content/summer-content.component';
 import { FallContentComponent } from './fall-content/fall-content.component';
-// import { BaitCardComponent } from './bait-card/bait-card.component';
+import { BaitCardComponent } from './bait-card/bait-card.component';
 
 
 @NgModule({
@@ -29,6 +29,7 @@ import { FallContentComponent } from './fall-content/fall-content.component';
     SpringContentComponent,
     SummerContentComponent,
     FallContentComponent,
+    BaitCardComponent
   ],
   imports: [
     BrowserModule,

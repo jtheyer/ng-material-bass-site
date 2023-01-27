@@ -1,4 +1,6 @@
-<div *ngFor="let bait of baits">
-    <p> {{ bait.label }} </p>
+<div class="bait-grid">
+    <div class="bait-container" *ngFor="let bait of baits; let i = index">
+        <bait-card [bait]="bait" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)"
+            (touchend)="onTouchEnd($event)"></bait-card>
+    </div>
 </div>
-<p>summer-content works!</p>

@@ -1,0 +1,111 @@
+// .bait-grid {
+//     display: grid;
+//     // grid-template-columns: 5em 100px 80%;
+//     grid-template-columns: 1fr 1fr;
+//     grid-template-rows: 200px auto;
+//     gap: 10px;
+// }
+
+/**Not sure why this ":root" is here, was in google example:
+*   https://web.dev/learn/css/grid/
+*/
+:root {
+    --var-col: 1fr;
+  }
+.bait-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    background-color: var(--color-stroke);
+    padding: 1em;
+    max-width: 70rem;
+  }
+  select {
+    min-width: unset;
+  }
+
+// .bait-container {
+//     // display: flex;
+//     // max-block-size: 200px;
+//     justify-content: center;
+//     align-items: center;
+// }
+// mat-card {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//   }
+// mat-card {
+//     background-size: cover;
+//     background-position: center;
+//   }
+.bait-card {
+    background-color: #eceff1;
+}
+
+mat-card-content {
+    // display: flex;
+    min-height: 250px;
+    background-size: cover;
+    background-position: center;
+    padding: 5px;
+}
+
+.bait-card-img {
+    margin: 0px 5px 5px 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+
+.tp-wrapper {
+    -webkit-perspective: 800px;
+            perspective: 800px;
+  }
+  
+  .tp-box {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 3rem auto;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-transform         : transform 1s;
+        -ms-transform         : transform 1s;
+            transform         : transform 1s;
+  }
+  .tp-box__side {
+     width: 100%;
+    height: 100%;
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .tp-box__front {
+    background: green;
+    -webkit-transform : rotateY(0deg);
+    -ms-transform     : rotateY(0deg);
+    transform         : rotateY(0deg);
+  }
+  .tp-box__back {
+    background: #23262d;
+    -webkit-transform : rotateY(-180deg);
+    -ms-transform     : rotateY(-180deg);
+    transform         : rotateY(-180deg);
+  }
+
+  
+// img {
+//     object-fit: cover;
+// }

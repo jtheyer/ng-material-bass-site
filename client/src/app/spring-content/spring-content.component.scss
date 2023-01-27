@@ -11,7 +11,7 @@
 */
 :root {
     --var-col: 1fr;
-  }
+}
 .bait-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -19,10 +19,11 @@
     background-color: var(--color-stroke);
     padding: 1em;
     max-width: 70rem;
-  }
-  select {
-    min-width: unset;
-  }
+}
+
+select {
+  min-width: unset;
+}
 
 // .bait-container {
 //     // display: flex;
