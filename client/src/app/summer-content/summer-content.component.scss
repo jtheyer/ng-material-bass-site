@@ -1,8 +1,18 @@
 .bait-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    // grid-template-rows: repeat(auto-fill, minmax(auto, 400px));
     gap: 10px;
     background-color: var(--color-stroke);
     padding: 1em;
     max-width: 70rem;
+}
+
+.content-footer {
+    width: 100%;
+    height: 200px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }

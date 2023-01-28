@@ -11,25 +11,40 @@
         (touchend)="onTouchEnd($event)"
     
     -->
-    <div #cw class="bait-container" 
-        *ngFor="let bait of baits; let i = index" 
-        (swipe)="onSwipe($event, i)" [id]="'spring-bait-'+i">
+
+
+    <!-- <div #cw class="bait-container" *ngFor="let bait of baits; let i = index" [id]="'spring-bait-'+i">
         <div *ngIf="bait.isVisible">
             <mat-card class="bait-card">
-                <mat-card-header>
-                    <mat-card-title>{{bait.label}}</mat-card-title>
-                </mat-card-header>
-                <img
-          class="bait-card-img" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
+                    <mat-card-header>
+                        <mat-card-title>{{bait.label}}</mat-card-title>
+                        <mat-card-subtitle>{{bait.colour}}</mat-card-subtitle>
+                            <mat-card-actions>
+                                <button mat-button (swipe)="onSwipe($event, i)" (click)="onSwipe($event, i)">
+                                    <span class="material-symbols-outlined">
+                                        <mat-icon>Info</mat-icon>
+                                    </span>
+                                </button>
+                            </mat-card-actions>
+                    </mat-card-header>
+                <img class="bait-card-img" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
             </mat-card>
         </div>
         <div *ngIf="!bait.isVisible">
-            <mat-card>
+            <mat-card class="bait-card">
                 <mat-card-header>
                     <mat-card-title>{{bait.label}}</mat-card-title>
-                    <img matCardAvatar class="bait-card-img" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
+                    <mat-card-subtitle>{{bait.colour}}</mat-card-subtitle>
+                        <mat-card-actions>
+                            <button mat-button (swipe)="onSwipe($event, i)" (click)="onSwipe($event, i)">
+                                <span class="material-symbols-outlined">
+                                    <mat-icon>Info</mat-icon>
+                                </span>
+                            </button>
+                        </mat-card-actions>
                 </mat-card-header>
-                
+                <img matCardAvatar class="bait-card-img" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
+
                 <mat-card-content>
                     <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
                         <strong>Conditions:</strong> {{ bait.conditions }}
@@ -38,5 +53,19 @@
             </mat-card>
         </div>
     </div>
+  <div class="content-footer"></div>  
+</div> -->
+
+<div class="bait-grid">
+    <div class="bait-container" *ngFor="let bait of baits; let i = index">
+        <!-- moved from bait card: 
+            (touchstart)="onTouchStart($event)" 
+            (touchmove)="onTouchMove($event)"
+            (touchend)="onTouchEnd($event)"
+        -->
+        <bait-card [bait]="bait" 
+           >
+        </bait-card>
+    </div>
 </div>
-<p>fall-content works!</p>
+<div class="content-footer"></div>  

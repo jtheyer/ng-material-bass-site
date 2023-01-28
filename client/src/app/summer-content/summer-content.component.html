@@ -1,6 +1,13 @@
 <div class="bait-grid">
     <div class="bait-container" *ngFor="let bait of baits; let i = index">
-        <bait-card [bait]="bait" (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)"
-            (touchend)="onTouchEnd($event)"></bait-card>
+        <!-- moved from bait card: 
+            (touchstart)="onTouchStart($event)" 
+            (touchmove)="onTouchMove($event)"
+            (touchend)="onTouchEnd($event)"
+        -->
+        <bait-card [bait]="bait" 
+           >
+        </bait-card>
     </div>
 </div>
+<div class="content-footer"></div>  

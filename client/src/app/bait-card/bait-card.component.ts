@@ -3,7 +3,6 @@ import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-br
 // import { trigger, keyframes, animate, transition } from '@angular/animations';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
-
 // export class MyHammerConfig extends HammerGestureConfig  {
 //   overrides = <any>{
 //     'swipe': { direction: Hammer.DIRECTION_ALL }
@@ -41,9 +40,9 @@ export class BaitCardComponent {
   // baits?: any[];
   @Input() bait!: any;
   @Input() i!: number
-  show = false; //just use !flipSide below...
-  isScrolling = false;
-  animationState?: string;
+  // show = false; //just use !flipSide below...
+  // isScrolling = false;
+  // animationState?: string;
   flip: string = 'inactive';
 
   toggleFlip() {
@@ -51,15 +50,15 @@ export class BaitCardComponent {
   }
 
 
-  startAnimation(state: string){
-    if (!this.animationState){
-      this.animationState = state;
-    }
-  }
+  // startAnimation(state: string){
+  //   if (!this.animationState){
+  //     this.animationState = state;
+  //   }
+  // }
 
-  resetAnimationState(){
-    this.animationState = '';
-  }
+  // resetAnimationState(){
+  //   this.animationState = '';
+  // }
 
   @ViewChild('cw') cw?: ElementRef;
   // ngAfterViewInit() {
@@ -77,10 +76,10 @@ export class BaitCardComponent {
   onSwipe(i: number) {
     console.log(`in bait card.. ${i}`);
     if (this.cw) {
-      if(!this.isScrolling){
+      // if(!this.isScrolling){
         this.bait.isVisible = !this.bait.isVisible;
-      }
-      this.isScrolling = false;
+      // }
+      // this.isScrolling = false;
     }
   }
 }

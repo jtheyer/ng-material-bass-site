@@ -21,9 +21,9 @@
     </div>
 </div> -->
 
-
+<!-- **** -->
 <!-- see "mat-card-title-group", add bait color as subtitle? -->
-<div class="tp-wrapper">
+<!-- <div class="tp-wrapper">
 	<div class="tp-box" (click)="toggleFlip()" (swipe)="toggleFlip()" [@flipState]="flip">
 		<div class="tp-box__side tp-box__front">
             Front
@@ -32,4 +32,50 @@
             Back
 		</div>
 	</div>
+</div> -->
+
+<!-- ****
+    2nd rendition, green cards animated works well
+-->
+<!-- see "mat-card-title-group", add bait color as subtitle? -->
+<div class="tp-wrapper">
+    <div #cw class="card-wrapper" [@flipState]="flip">
+        <div class="tp-box__side tp-box__front">
+            <mat-card class="bait-card">
+                <mat-card-header>
+                    <mat-card-title><strong>{{bait.label}}</strong><sub> ({{bait.colour}}) </sub> </mat-card-title>
+                    <!-- <mat-card-subtitle></mat-card-subtitle> -->
+                    <mat-card-actions>
+                        <button mat-button (click)="toggleFlip()" (swipe)="toggleFlip()">
+                            <span class="material-symbols-outlined">
+                                <mat-icon>Info</mat-icon>
+                            </span>
+                        </button>
+                    </mat-card-actions>
+                </mat-card-header>
+                <img class="bait-card-img__front" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
+            </mat-card>
+        </div>
+        <div class="tp-box__side tp-box__back">
+            <mat-card class="bait-card bait-card__back">
+                <mat-card-header>
+                    <mat-card-title><strong>{{bait.label}}</strong><sub> ({{bait.colour}}) </sub> </mat-card-title>
+                    <mat-card-actions>
+                        <button mat-button (click)="toggleFlip()" (swipe)="toggleFlip()">
+                            <span class="material-symbols-outlined">
+                                <mat-icon>Info</mat-icon>
+                            </span>
+                        </button>
+                    </mat-card-actions>
+                </mat-card-header>
+                <img matCardAvatar class="bait-card-img__back" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
+                <mat-card-content>
+                    <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
+                        <strong>Conditions:</strong> {{ bait.conditions }}
+                    </p>
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+    </div>
 </div>

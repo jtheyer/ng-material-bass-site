@@ -3,11 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { HammerModule } from '@angular/platform-browser';
+import { HammerConfigBaitCard } from './myHammerConfig';
+
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { HammerModule } from '@angular/platform-browser';
-import { HammerConfigBaitCard } from './myHammerConfig';
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from '@angular/material/icon';
+
+
 /**
  * After making the baits service, to use *ngFor in 
  * HomeContentComponent <div> the import and declaration below
@@ -37,6 +43,8 @@ import { BaitCardComponent } from './bait-card/bait-card.component';
     BrowserAnimationsModule,
     MatTabsModule,
     MatCardModule,
+    MatButtonModule,
+    MatIconModule,
     MatGridListModule,
     HammerModule,
   ],
