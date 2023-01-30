@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { BaitsService } from '../baits.service';
 
 @Component({
@@ -7,27 +7,13 @@ import { BaitsService } from '../baits.service';
   styleUrls: ['./spring-content.component.scss']
 })
 export class SpringContentComponent implements OnInit {
-  baits?: any[];
+  baits!: any[];
   isScrolling = false;
 
-
-  constructor(
-    private baitsService: BaitsService) {
-
-  };
+  constructor(private baitsService: BaitsService) {};
 
   ngOnInit(): void {
-    this.baits = this.baitsService.getBaitsBySeason('spring');
-  }
-
-  @ViewChild('cw') cw?: HTMLElement;
-  onSwipe(i: number) {
-    if (this.cw) {
-      if (!this.isScrolling) {
-        this.baits![i].isVisible = !this.baits![i].isVisible;
-      }
-      this.isScrolling = false;
-    }
+    this.baits = this.baitsService.getSpringBaits();
   }
 
 }

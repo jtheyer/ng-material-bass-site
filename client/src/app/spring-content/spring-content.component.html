@@ -1,46 +1,7 @@
 
-    <!-- <div #cw class="bait-container" 
-        *ngFor="let bait of baits; let i = index" 
-        (touchstart)="isScrolling=false"
-        (touchmove)="onTouchMove()" 
-        (touchend)="onTouchEnd()" 
-        (swipe)="onSwipe(i)" [id]="'spring-bait-'+i"> -->
-<!-- <div class="bait-grid">
-    <div #cw class="bait-container" 
-        *ngFor="let bait of baits; let i = index" 
-        (swipe)="onSwipe(i)" [id]="'spring-bait-'+i">
-        <div *ngIf="bait.isVisible">
-            <mat-card class="bait-card">
-                <mat-card-header>
-                    <mat-card-title>{{bait.label}}</mat-card-title>
-                </mat-card-header>
-                <img class="bait-card-img" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
-            </mat-card>
-        </div>
-        <div *ngIf="!bait.isVisible">
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>{{bait.label}}</mat-card-title>
-                </mat-card-header>
-                <mat-card-content>
-                    <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
-                        <strong>Conditions:</strong> {{ bait.conditions }}
-                    </p>
-                </mat-card-content>
-            </mat-card>
-        </div>
-    </div>
-</div> -->
-
 <div class="bait-grid">
     <div class="bait-container" *ngFor="let bait of baits; let i = index">
-        <!-- moved from bait card: 
-            (touchstart)="onTouchStart($event)" 
-            (touchmove)="onTouchMove($event)"
-            (touchend)="onTouchEnd($event)"
-        -->
-        <bait-card [bait]="bait" 
-           >
+        <bait-card [bait]="bait">
         </bait-card>
     </div>
 </div>

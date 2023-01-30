@@ -13,7 +13,6 @@ export class HomeContentComponent implements OnInit{
   constructor(private baitsService: BaitsService) {}
 
   ngOnInit() {
-    // this.baits = this.baitsService.getBaitsBySeason('home');
     this.hotBaits = this.baitsService.getHomeBaits();
     this.allSeasonBaits = this.baitsService.getAllSeasonBaits();
   }
