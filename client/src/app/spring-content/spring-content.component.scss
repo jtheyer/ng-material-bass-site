@@ -1,17 +1,3 @@
-// .bait-grid {
-//     display: grid;
-//     // grid-template-columns: 5em 100px 80%;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: 200px auto;
-//     gap: 10px;
-// }
-
-/**Not sure why this ":root" is here, was in google example:
-*   https://web.dev/learn/css/grid/
-*/
-:root {
-    --var-col: 1fr;
-}
 .bait-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -21,43 +7,20 @@
     max-width: 70rem;
 }
 
-select {
-  min-width: unset;
-}
-
-// .bait-container {
-//     // display: flex;
-//     // max-block-size: 200px;
-//     justify-content: center;
-//     align-items: center;
+// .bait-card {
+//     background-color: #eceff1;
 // }
-// mat-card {
-//     display: grid;
-//     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-//   }
-// mat-card {
+
+// mat-card-content {
+//     // display: flex;
+//     min-height: 250px;
 //     background-size: cover;
 //     background-position: center;
-//   }
-.bait-card {
-    background-color: #eceff1;
-}
+//     padding: 5px;
+// }
 
-mat-card-content {
-    // display: flex;
-    min-height: 250px;
-    background-size: cover;
-    background-position: center;
-    padding: 5px;
-}
-
-.bait-card-img {
-    margin: 0px 5px 5px 5px;
-    border: 1px solid black;
-    border-radius: 3px;
-}
-
-  
-// img {
-//     object-fit: cover;
+// .bait-card-img {
+//     margin: 0px 5px 5px 5px;
+//     border: 1px solid black;
+//     border-radius: 3px;
 // }

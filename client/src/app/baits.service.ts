@@ -5,20 +5,115 @@ import { Injectable } from '@angular/core';
 })
 export class BaitsService {
 
-  private baits = [
+  private hotBaits = [
     { 
       season: 'home',
       label: 'Jerkbait 1',
-      make: 'Megabass Ito 110',
-      colour: 'GG Pro Perch',
+      make: 'Megabass Ito 110+1',
+      colour: 'GP Pro Perch',
       imgUrl: 'assets/img/gg-perch.jpeg',
-      imgAlt: 'Megabass Jerkbait (GG-Perch)',
+      imgUrlMd: 'assets/img/spring/md-gg-perch.jpg',
+      imgAlt: 'Megabass Jerkbait (GP-Pro-Perch)',
       situation: 'Perch are all over shallow. \
       They\'re heavily schooling and aggressively roaming.',
       conditions: 'Any',
-      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_1101_Jerkbaits/descpage-MBIV11.html',
+      linkLabel: 'Tackle Warehouse'
     },
+  ];
+
+  private allSeasonBaits = [
+    { 
+      season: 'all',
+      label: 'Dropshot',
+      make: 'Roboworm',
+      colour: 'Grn Pmk[Neon]/M.M.III',
+      size: '4.5"',
+      imgUrl: 'assets/img/gg-perch.jpeg',
+      imgAlt: 'Megabass Jerkbait (GP-Pro-Perch)',
+      situation: 'Any. However, seems to excel when it\'s hard to find \
+      life on the sonar.',
+      conditions: 'Any. However, seems to excel in calm(er) conditions and/or when \
+      seasons are at a stable point.',
+      affiliateLink: 'https://www.tacklewarehouse.com/Roboworm_Straight_Tail_Worms/descpage-RW45ST.html',
+      linkLabel: 'Tackle Warehouse'
+    },
+    { 
+      season: 'all',
+      label: 'Senko',
+      make: 'Yamamoto',
+      colour: 'Grn Pmk Bk Flake',
+      size: '4"-5"',
+      imgUrl: 'assets/img/gg-perch.jpeg',
+      imgAlt: 'Megabass Jerkbait (GP-Pro-Perch)',
+      situation: 'Any. However, seems to excel when the bass aren\'t \
+      keyed in on shad.',
+      conditions: 'Any',
+      affiliateLink: 'https://www.tacklewarehouse.com/Yamamoto_Senko/descpage-YAS.html',
+      linkLabel: 'Tackle Warehouse'
+    }
+  ];
+  private springBaits = [
+    { 
+      season: 'spring',
+      label: 'Umbrella Rig', 
+      make: 'Hog Farmer',
+      colour: 'Default',
+      imgUrlMd: 'assets/img/spring/arig-sm.jpg',
+      imgAlt: 'Hog Farmer Umbrella Rig',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Sunny / Bright',
+      affiliateLink: 'https://www.tacklewarehouse.com/Hog_Farmer_Baits_Tactical_Bassin_Mini_Flex_Rig_4_Blade/descpage-HTMF.html',
+      linkLabel: 'Tackle Warehouse'
+    },
+    { 
+      season: 'spring',
+      label: 'Jerkbait 1',
+      make: 'Megabass Ito 110+1',
+      colour: 'GP Pro Perch',
+      imgUrl: 'assets/img/gg-perch.jpeg',
+      imgUrlMd: 'assets/img/spring/md-gg-perch.jpg',
+      imgAlt: 'Megabass Jerkbait (GP-Pro-Perch)',
+      situation: 'Perch are all over shallow. \
+      They\'re heavily schooling and aggressively roaming.',
+      conditions: 'Any',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_1101_Jerkbaits/descpage-MBIV11.html',
+      linkLabel: 'Tackle Warehouse'
+    },
+    { 
+      season: 'spring',
+      label: 'Jerkbait 2', 
+      make: 'Megabass Ito 110',
+      colour: 'Mat Shad',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/mat-shad-sm.jpg',
+      imgAlt: 'Megabass Jerkbait (Mat Shad)',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Cloudy / Dark',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'Tackle Warehouse'
+    },
+    { 
+      season: 'spring',
+      label: 'Jerkbait 3', 
+      make: 'Megabass Ito 110',
+      colour: 'Crystal Shad',
+      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/crystal-shad-sm.jpg',
+      imgAlt: 'Megabass Jerkbait (Crystal Shad)',
+      situation: 'Shad balls are prevalent on sonar & less perch are around.',
+      conditions: 'Sunny / Bright',
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
+      linkLabel: 'Tackle Warehouse'
+    },
+  ];
+
+  private summerBaits = [];
+  private fallBaits = [];
+
+
+  private baits = [
+    
     { 
       season: 'home',
       label: 'Jerkbait 2', 
@@ -29,7 +124,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Cloudy / Dark',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
     },
     { 
       season: 'home',
@@ -41,7 +136,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Sunny / Bright',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
     },
     { 
       season: 'home',
@@ -53,7 +148,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Any',
       affiliateLink: 'https://www.tacklewarehouse.com/Hog_Farmer_Baits_Tactical_Bassin_Mini_Flex_Rig_4_Blade/descpage-HTMF.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
     },
     { 
       season: 'spring',
@@ -67,7 +162,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Sunny / Bright',
       affiliateLink: 'https://www.tacklewarehouse.com/Hog_Farmer_Baits_Tactical_Bassin_Mini_Flex_Rig_4_Blade/descpage-HTMF.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true //Think of this as holding a bait in the package. 
       //..Front view of the package is the bait under plastic, 
@@ -76,18 +171,17 @@ export class BaitsService {
     { 
       season: 'spring',
       label: 'Jerkbait 1',
-      make: 'Megabass Ito 110',
-      colour: 'GG Pro Perch',
-      imgUrl: 'assets/img/spring/sm-gg-perch.jpg',
+      make: 'Megabass Ito 110+1',
+      colour: 'GP Pro Perch',
+      imgUrl: 'assets/img/gg-perch.jpeg',
       imgUrlMd: 'assets/img/spring/md-gg-perch.jpg',
-      imgAlt: 'Megabass Jerkbait (GG-Perch)',
+      imgAlt: 'Megabass Jerkbait (GP-Pro-Perch)',
       situation: 'Perch are all over shallow. \
       They\'re heavily schooling and aggressively roaming.',
       conditions: 'Any',
-      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
-      ,
-      isVisible: true
+      affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_1101_Jerkbaits/descpage-MBIV11.html',
+      linkLabel: 'Tackle Warehouse',
+      // isVisible: true
     },
     { 
       season: 'spring',
@@ -100,7 +194,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Cloudy / Dark',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -115,7 +209,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Sunny / Bright',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -131,7 +225,7 @@ export class BaitsService {
       They\'re heavily schooling and aggressively roaming.',
       conditions: 'Any',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -146,7 +240,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Cloudy / Dark',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -161,7 +255,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Cloudy / Dark',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -176,7 +270,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Cloudy / Dark',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -191,7 +285,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Cloudy / Dark',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -206,7 +300,7 @@ export class BaitsService {
       situation: 'Shad balls are prevalent on sonar & less perch are around.',
       conditions: 'Cloudy / Dark',
       affiliateLink: 'https://www.tacklewarehouse.com/Megabass_Ito_Vision_110_Jerkbaits/descpage-MB110.html',
-      linkLabel: 'See on Tackle Warehouse'
+      linkLabel: 'Tackle Warehouse'
       ,
       isVisible: true
     },
@@ -224,7 +318,11 @@ export class BaitsService {
     return this.baits;
   }
 
-  toggleBaitInfo(i: number){
-    return this.baits[i].isVisible = !this.baits[i].isVisible;
+  getHomeBaits(){
+    return this.hotBaits;
+  }
+
+  getAllSeasonBaits(){
+    return this.allSeasonBaits;
   }
 }

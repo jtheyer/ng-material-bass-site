@@ -1,57 +1,5 @@
-// .bait-grid {
-//     display: grid;
-//     // grid-template-columns: 5em 100px 80%;
-//     grid-template-columns: 1fr 1fr;
-//     grid-template-rows: 200px auto;
-//     gap: 10px;
-// }
-
-/**Not sure why this ":root" is here, was in google example:
-*   https://web.dev/learn/css/grid/
-*/
-:root {
-  --var-col: 1fr;
-}
-
-.bait-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
-  background-color: var(--color-stroke);
-  padding: 1em;
-  max-width: 70rem;
-}
-
-// *** also from google example  ***
-// select {
-//   min-width: unset;
-// }
-
-.tp-wrapper {
-  min-height: 600px;
-}
-
-.bait-card {
-  background-color: #eceff1;
-  border: 1px solid black;
-}
-.bait-card__back {
-  min-width: 350px;
-  max-width: 400px;
-}
-
-.bait-card-img__front {
-  max-width: 300px;
-  max-height: 400px;
-  margin: 0px 5px 5px 5px;
-  border: 3px solid black;
-  border-radius: 5px;
-}
-
-.bait-card-img__back {
-  margin: 0px 5px 5px 5px;
-  border: 1px solid black;
-  border-radius: 5px;
+mat-card {
+  min-width: 100%;
 }
 
 mat-card-header {
@@ -63,67 +11,78 @@ mat-card-actions {
   margin-left: auto;
 }
 
-mat-card-content {
-  // display: flex;
-  min-height: 300px;
-  max-height: 800px;
-  background-size: cover;
-  background-position: center;
-  padding: 5px;
+.bait-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  background-color: var(--color-stroke);
+  padding: 1em;
+  max-width: 70rem;
 }
 
-// mat-card {
-//   -webkit-transform-style: preserve-3d;
-//   transform-style: preserve-3d;
-//   -webkit-transform: transform 1s;
-//   -ms-transform: transform 1s;
-//   transform: transform 1s;
-// }
+.bait-card {
+  background-color: #eceff1;
+  border: 1px solid black;
+  min-height: 550px;
+  width: 100%;
+}
+
+.bait-card-img__front {
+  // max-width: 300px;
+  max-height: 400px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 10px 5px 5px 5px;
+  border: 3px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.bait-card-img__back {
+  margin: 0px 5px 5px 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
 
 .tp-wrapper {
-  -webkit-perspective: 800px;
-  perspective: 800px;
+  min-height: 400px;
+  padding: 5px 15px;
+}
+
+.tp-wrapper {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  margin-bottom: 20px;
+  padding-bottom: 80px;
 }
 
 .card-wrapper {
-  max-width: 200px;
-  max-height: 200px;
+  // max-width: 200px;
+  // max-height: 200px;
+  width: 100%;
   position: relative;
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transform: transform 1s;
   -ms-transform: transform 1s;
   transform: transform 1s;
-  
 }
 
-// .tp-box {
-// position: relative;
-// width: 200px;
-// height: 100px;
-// margin: 3rem auto;
-// }
-
-// -webkit-transform-style: preserve-3d;
-//         transform-style: preserve-3d;
-// -webkit-transform         : transform 1s;
-//     -ms-transform         : transform 1s;
-//         transform         : transform 1s;
-// }
 .tp-box__side {
-  //  width: 100%;
-  // height: 100%;
-  // position: absolute;
+  min-width: 100%;
+  min-height: 400px;
 
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
-  // color: #fff;
-  // text-align: center;
-  // line-height: 100px;
-  // font-size: 24px;
-  // font-weight: 700;
-  // cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -131,20 +90,30 @@ mat-card-content {
 }
 
 .tp-box__front {
-  // background: green;
+  
   position: absolute;
-   top: 0;
-   left: 0;
+  top: 0;
+  left: 0;
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
 
 .tp-box__back {
-  // background: #23262d;
-
-  //  transform: rotateY(180deg);
   -webkit-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
+}
+
+
+.bait-card-affiliate-link-wrap {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  //make the element "sticky" to the bottom of the card
+  position: absolute;
+  bottom: 0;
 }

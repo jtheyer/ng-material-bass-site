@@ -7,13 +7,14 @@ import { BaitsService } from '../baits.service';
   styleUrls: ['./home-content.component.scss']
 })
 export class HomeContentComponent implements OnInit{
-  baits: any[];
+  hotBaits!: any[];
+  allSeasonBaits!: any[];
 
-  constructor(private baitsService: BaitsService) {
-    this.baits = [];
-  }
+  constructor(private baitsService: BaitsService) {}
 
   ngOnInit() {
-    this.baits = this.baitsService.getBaitsBySeason('home');
+    // this.baits = this.baitsService.getBaitsBySeason('home');
+    this.hotBaits = this.baitsService.getHomeBaits();
+    this.allSeasonBaits = this.baitsService.getAllSeasonBaits();
   }
 }

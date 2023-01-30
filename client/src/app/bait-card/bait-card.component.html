@@ -1,50 +1,10 @@
-<!-- <div #cw class="bait-container" (swipe)="onSwipe(i)" [id]="'spring-bait-'+i">
-    <div *ngIf="bait.isVisible">
-        <mat-card class="bait-card">
-            <mat-card-header>
-                <mat-card-title>{{bait.label}}</mat-card-title>
-            </mat-card-header>
-            <img class="bait-card-img" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
-        </mat-card>
-    </div>
-    <div *ngIf="!bait.isVisible">
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>{{bait.label}}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <p><strong>Situation:</strong> {{ bait.situation }} <br><br>
-                    <strong>Conditions:</strong> {{ bait.conditions }}
-                </p>
-            </mat-card-content>
-        </mat-card>
-    </div>
-</div> -->
-
-<!-- **** -->
-<!-- see "mat-card-title-group", add bait color as subtitle? -->
-<!-- <div class="tp-wrapper">
-	<div class="tp-box" (click)="toggleFlip()" (swipe)="toggleFlip()" [@flipState]="flip">
-		<div class="tp-box__side tp-box__front">
-            Front
-		</div>
-		<div class="tp-box__side tp-box__back">
-            Back
-		</div>
-	</div>
-</div> -->
-
-<!-- ****
-    2nd rendition, green cards animated works well
--->
-<!-- see "mat-card-title-group", add bait color as subtitle? -->
 <div class="tp-wrapper">
     <div #cw class="card-wrapper" [@flipState]="flip">
+
         <div class="tp-box__side tp-box__front">
             <mat-card class="bait-card">
                 <mat-card-header>
-                    <mat-card-title><strong>{{bait.label}}</strong><sub> ({{bait.colour}}) </sub> </mat-card-title>
-                    <!-- <mat-card-subtitle></mat-card-subtitle> -->
+                    <mat-card-title><strong>{{bait.label}}</strong><sub><br>({{bait.colour}})</sub></mat-card-title>
                     <mat-card-actions>
                         <button mat-button (click)="toggleFlip()" (swipe)="toggleFlip()">
                             <span class="material-symbols-outlined">
@@ -54,16 +14,22 @@
                     </mat-card-actions>
                 </mat-card-header>
                 <img class="bait-card-img__front" src="{{bait.imgUrlMd}}" alt="{{bait.imgAlt}}">
+                <div class="bait-card-affiliate-link-wrap">
+                    <p>Shop: {{bait.linkLabel}}</p>
+                    <a mat-raised-button href="{{bait.affiliateLink}}" color="accent">
+                        Visit Site
+                    </a>
+                </div>
             </mat-card>
-        </div>
+        </div><!--/front of card-->
         <div class="tp-box__side tp-box__back">
             <mat-card class="bait-card bait-card__back">
                 <mat-card-header>
-                    <mat-card-title><strong>{{bait.label}}</strong><sub> ({{bait.colour}}) </sub> </mat-card-title>
+                    <mat-card-title><strong>{{bait.label}}</strong><sub><br>({{bait.colour}})</sub></mat-card-title>
                     <mat-card-actions>
                         <button mat-button (click)="toggleFlip()" (swipe)="toggleFlip()">
                             <span class="material-symbols-outlined">
-                                <mat-icon>Info</mat-icon>
+                                swap_horiz
                             </span>
                         </button>
                     </mat-card-actions>
@@ -74,8 +40,8 @@
                         <strong>Conditions:</strong> {{ bait.conditions }}
                     </p>
                 </mat-card-content>
-
             </mat-card>
-        </div>
+        </div><!--/back of card-->
+        
     </div>
 </div>
