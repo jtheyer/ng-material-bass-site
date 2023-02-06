@@ -11,24 +11,16 @@ mat-card-actions {
   margin-left: auto;
 }
 
-.bait-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 10px;
-  background-color: var(--color-stroke);
-  padding: 1em;
-  max-width: 70rem;
-}
 
 .bait-card {
-  background-color: #eceff1;
+  // background-color: mat-color($my-primary, 500);
+  background-color: #cfd8dc;
   border: 1px solid black;
-  min-height: 550px;
+  min-height: 450px;
   width: 100%;
 }
 
 .bait-card-img__front {
-  // max-width: 300px;
   max-height: 400px;
   max-width: 100%;
   height: auto;
@@ -64,8 +56,6 @@ mat-card-actions {
 }
 
 .card-wrapper {
-  // max-width: 200px;
-  // max-height: 200px;
   width: 100%;
   position: relative;
 

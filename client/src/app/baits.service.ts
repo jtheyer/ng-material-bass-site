@@ -11,7 +11,7 @@ export class BaitsService {
       make: 'Megabass Ito 110+1',
       colour: 'GP Pro Perch',
       imgUrl: 'assets/img/gg-perch.jpeg',
-      imgUrlMd: 'assets/img/spring/md-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/gp-perch-jerkbait.webp',
       imgAlt: 'Megabass Jerkbait (GP-Pro-Perch)',
       situation: 'Perch are all over shallow. \
       They\'re heavily schooling and aggressively roaming.',
@@ -65,7 +65,7 @@ export class BaitsService {
       make: 'Megabass Ito 110+1',
       colour: 'GP Pro Perch',
       imgUrl: 'assets/img/gg-perch.jpeg',
-      imgUrlMd: 'assets/img/spring/md-gg-perch.jpg',
+      imgUrlMd: 'assets/img/spring/gp-perch-jerkbait.webp',
       imgAlt: 'Megabass Jerkbait (GP-Pro-Perch)',
       situation: 'Perch are all over shallow. \
       They\'re heavily schooling and aggressively roaming.',

@@ -143,6 +143,17 @@ $my-theme: mat.define-light-theme((
  density: 0,
 ));
 
+// Add the custom styles for the mat-tab-ink-bar
+// .mat-tab-ink-bar {
+//   // background-color: mat-color($app-accent);
+//   top: 0;
+//   bottom: auto;
+//   height: 3px;
+// }
+// .mat-ink-bar{
+//   top:0px !important;
+// }
+
 @include mat.core-theme($my-theme);
 
 @include mat.button-theme($my-theme);
@@ -150,9 +161,16 @@ $my-theme: mat.define-light-theme((
 // @include mat.card-theme($my-theme);
 @include mat.icon-theme($my-theme);
 
+.mat-primary {
+  background-color: #546e7a;
+}
+
 
 body { 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
+  overflow-x: hidden;
+  margin: 0 !important; //override class "mat-typography"'s unwanted margin
+  background-color: #FFFFFF;
 }
 
 .content-footer {
@@ -162,4 +180,19 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.mdc-tab {
+  font-size: var(--mdc-typography-button-font-size, 16px);
+}
+
+.mat-mdc-tab-header {
+  position: "'above'";
+}
+
+.tabs-wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
 }

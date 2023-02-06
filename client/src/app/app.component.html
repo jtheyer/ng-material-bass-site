@@ -1,17 +1,15 @@
-<div>	
-  <router-outlet></router-outlet>	
-</div> 
+<router-outlet></router-outlet>
 
 <div class="tabs-wrapper">
-  <nav mat-tab-nav-bar ngClass="tabs" [tabPanel]="tabPanel">
-    <a 
-      *ngFor="let link of links"
-      mat-tab-link
+  <nav mat-tab-nav-bar ngClass="tabs" [tabPanel]="tabPanel" 
+    [backgroundColor]="'primary'" [color]="'accent'"
+    class="mat-tab-header-inverted">
+    <a class="my-tab-link" *ngFor="let link of links" mat-tab-link
       routerLink="{{link.path}}"
-      routerLinkActive="active-link"
-      (click)="activeLink=link.path"
-      [active]="activeLink == link.path"
-    >  {{ link.label }} </a>
+      routerLinkActive="active-link" (click)="activeLink=link.path" 
+      [active]="activeLink == link.path"> 
+        {{ link.label }}
+    </a>
   </nav>
   <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 </div>

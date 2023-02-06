@@ -1,47 +1,58 @@
-<div class="child-centered">
-
-    <div class="welcome-block">
-        <h1>Welcome to a TL;DR showcase of NY Bass fishing baits.</h1>
-        <p>
-            I'd like to share what is currently
-            is working for me (as a successful tournament angler).
+<span class="black-boarder-faceplate" data-z-index="5">
+    <div class="landing-header">
+        <h1>TL;DR NY <span class="bass-text">Bass</span> fishing baits.</h1>
+        <h2>These. Just. WORK<span class="work-period">.</span></h2>
+    </div>
+    <div class="landing-block">
+        <p class="talk-text">
+            "I'd like to share what is currently working for me (as a successful tournament angler). 
+            I am only listing baits that have put fish in my livewell on tournament day.
             <br>
             This is as much of a journal for me to look back on as it is
-            (hopefully) helpful for other anglers out there!
-            <br>
-            * Swipe or press bait cards "Info" icon for a slightly deeper dive.
-            <br>
-            <br>
-            <mark>DISCLAIMER</mark>: Affiliate marketing links ahead. All products here are
-            ones I genuinely believe in! If you're looking to try a product,
-            please order from the link(s) provided 🙏<br>
-            These links are of NO EXTRA COST to you, and are a great way to
-            show your support for this page.
-            <br>
-            <br>
-            Thank you and tight lines 🎣
+            (hopefully) helpful for you too!
         </p>
+         <p class="talk-text"> <span class="highlight warn-text" >DISCLAIMER</span>:
+            Some affiliate marketing links ahead. All products here are
+            ones I genuinely believe in! If you're looking to try a product,
+            please order from the link(s) provided.🙏<br>
+            These links are of NO EXTRA COST to you, and are a great way to
+            show support!
+        </p>
+        <p class="talk-text"> Thank you and tight lines" 🎣</p>
+        <br>
+        <p class="quote-text">- Jason</p>
 
-        <h2>What's hot this week:</h2>
-        <p>
+    </div>
+    <p class="info-talk-text">*Swipe right or tap the "ℹ️" for a slightly deeper dive.</p>
+</span>
+
+<!-- ======================================================================================= -->
+<!-- ======================================================================================= -->
+<div class="hot-week">
+    <div class="hot-week-heading">
+        <h2>What's <span class="hot-text">hot</span> this week:</h2>
+        <p class="talk-text">
             ...nothing for me, because I code over winter and skip the hard water!
             But here is what was working the 2nd
             week of December (2022):
         </p>
     </div>
-</div>
-
-<div class="bait-grid">
-    <div class="bait-container" *ngFor="let bait of hotBaits; let i = index">
-        <bait-card [bait]="bait"></bait-card>
+    <div class="bait-grid">
+        <div class="bait-container" *ngFor="let bait of hotBaits; let i = index">
+            <bait-card [bait]="bait"></bait-card>
+        </div>
     </div>
 </div>
-
-<h2>What's hot (almost) anytime:</h2>
+<br>
+<!-- ======================================================================================= -->
+<div class="hot-week-heading">
+    <h2>&emsp;...(almost) anytime:</h2>
+</div>
 <div class="bait-grid">
     <div class="bait-container" *ngFor="let bait of allSeasonBaits; let i = index">
         <bait-card [bait]="bait"></bait-card>
     </div>
 </div>
 
-<div class="content-footer"></div>  
+
+<div class="content-footer"></div>

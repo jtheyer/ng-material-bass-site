@@ -29,7 +29,6 @@ export class AppComponent {
   ];
   activeLink = this.links[0].path;
 
-
   /**
    * No use for this really.. just reference for now...
    */
