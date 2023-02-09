@@ -15,39 +15,6 @@
     margin-top: 20px;
 }
 
-.bait-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-    background-color: var(--color-stroke);
-    padding: 1em;
-    max-width: 70rem;
-}
-
-// .landing-block-wrap {
-//     // background-color: #F2F2F2;
-//     background-color: red;
-//     padding: 0px;
-//     // width: 100%;
-//     // border: 10px solid black;
-//     // border-radius: 5px;
-//     border-bottom-left-radius: 10px;
-//     border-bottom-right-radius: 10px;
-//     border-top: 0;
-//     border-left: 0;
-//     border-right: 0;
-//     border-bottom: 10px solid black;
-//     border-left: 10px solid black;
-//     border-right: 10px solid black;
-// }
-
-// .landing-block {
-//     background-color: blue;
-//     border-radius: 10px;
-//     background-color: white;
-//     padding: 20px;
-//   }
-
 .landing-block {
     padding: 20px;
     position: relative;
@@ -59,8 +26,6 @@
     border-bottom: 10px solid black;
     border-left: 10px solid black;
     border-right: 10px solid black;
-
-    margin-bottom: 100px;
 
     display: flex;
     flex-direction: column;
@@ -86,6 +51,38 @@
     border-radius: 10px;
 }
 
+div.insta-wrapper {
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#insta-button {
+    min-height: fit-content;
+    padding: 25px
+}
+
+.fa-3x {
+    font-size: 3em;
+}
+
+i.fa-instagram {
+    // background-color: #E1306C; 
+    color: red;
+}
+
+
+.bait-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    background-color: var(--color-stroke);
+    padding: 1em;
+    max-width: 70rem;
+}
 
 .hot-week {
     padding: 10px;
@@ -118,6 +115,10 @@
     font-size: 14pt;
 }
 
+.info-talk-text-wrapper {
+    z-index: 199;
+}
+
 .info-talk-text {
     padding: 10px 20px;
     align-self: right;
@@ -136,9 +137,6 @@
 
 .warn-text {
     font: 1em sans-serif;
-    // position: absolute;
-    // margin-right: 80%;
-    // margin-bottom: -10px;
 }
 
 .disclaimer-background {

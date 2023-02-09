@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import {ThemePalette} from '@angular/material/core';
 
 @Component({
@@ -6,9 +7,16 @@ import {ThemePalette} from '@angular/material/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'JTH Bass Fishing';
+export class AppComponent implements OnInit {
+  private title = 'TL;DR NY Bass';
   background: ThemePalette = undefined;
+
+  constructor(private titleService: Title){};
+
+  ngOnInit( ){
+    this.titleService.setTitle(this.title);
+  }
+
   links = [
     {
       label: 'Home',
@@ -28,6 +36,8 @@ export class AppComponent {
     }
   ];
   activeLink = this.links[0].path;
+
+
 
   /**
    * No use for this really.. just reference for now...

@@ -1,0 +1,14 @@
+.mat-tab-label {
+  position: relative;
+  z-index: 1;
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-ink-bar {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.mat-tab-label {
+    background-color: blue !important;
+  }

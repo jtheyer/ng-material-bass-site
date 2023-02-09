@@ -131,8 +131,10 @@
 
 @include mat.core();
 
-$my-primary: mat.define-palette(mat.$blue-grey-palette);
-$my-accent: mat.define-palette(mat.$orange-palette, 400);
+// $my-primary: mat.define-palette(mat.$blue-grey-palette);
+// $my-accent: mat.define-palette(mat.$orange-palette, 400);
+$my-primary: mat.define-palette(mat.$grey-palette, 900);
+$my-accent: mat.define-palette(mat.$light-green-palette, A700);
 
 $my-theme: mat.define-light-theme((
  color: (
